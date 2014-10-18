@@ -18,7 +18,7 @@ CREATE TABLE entries (
 """
 
 DB_ENTRY_INSERT = """
-INSERT INTO learning_journal.entries (title, text, created) VALUES (%s, %s, %s)
+INSERT INTO entries (title, text, created) VALUES (%s, %s, %s)
 """
 
 app = Flask(__name__)
