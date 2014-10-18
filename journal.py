@@ -3,7 +3,7 @@ from flask import Flask
 import os
 import psycopg2
 from contextlib import closing
-from flask import g 
+from flask import g
 import datetime
 from flask import render_template
 
@@ -16,8 +16,9 @@ CREATE TABLE entries (
     created TIMESTAMP NOT NULL
 )
 """
+
 DB_ENTRY_INSERT = """
-INSERT INTO entries (title, text, created) VALUES (%s, %s, %s)
+INSERT INTO learning_journal.entries (title, text, created) VALUES (%s, %s, %s)
 """
 
 app = Flask(__name__)
