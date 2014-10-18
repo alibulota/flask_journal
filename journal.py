@@ -9,7 +9,7 @@ from flask import render_template
 
 DB_SCHEMA = """
 DROP TABLE IF EXISTS entries;
-CREATE TABLE \"entries\" (
+CREATE TABLE entries (
     id serial PRIMARY KEY,
     title VARCHAR (127) NOT NULL,
     text TEXT NOT NULL,
@@ -18,7 +18,7 @@ CREATE TABLE \"entries\" (
 """
 
 DB_ENTRY_INSERT = """
-INSERT INTO \"entries\" (title, text, created) VALUES (%s, %s, %s)
+INSERT INTO learning_journal.entries (title, text, created) VALUES (%s, %s, %s)
 """
 
 app = Flask(__name__)
