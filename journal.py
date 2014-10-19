@@ -17,6 +17,7 @@ CREATE TABLE entries (
 )
 """
 
+
 DB_ENTRY_INSERT = """
 INSERT INTO entries (title, text, created) VALUES (%s, %s, %s)
 """
